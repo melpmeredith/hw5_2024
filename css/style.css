@@ -1,0 +1,150 @@
+body {
+    font-family:'Poppins', serif;
+    background-image: url("/images/concrete_seamless.png"); 
+
+}
+
+
+header {
+    display: flex; 
+    flex-direction:column;
+    align-items: center;
+}
+
+.nav_links {
+    display: flex; 
+    flex-direction:column;
+    /* align-items: center; */
+}
+
+a:visited {
+    color: #0000EE;
+}
+
+
+.card>header {
+background-color: #288088;
+border: solid 2px #45ADAD;
+padding-top: 20px;
+padding-bottom: 20px;
+border-radius: 50px 50px 0px 0px;
+
+}
+
+.card {
+    border-radius: 50px 50px 0px 0px;
+}
+
+.pricing {
+    display: flex; 
+    flex-direction:column;
+    /* align-items: center; */
+    width: 450px;
+    margin: auto; 
+}
+
+/* 10px margin on all four sides and a width of 300px */
+.gallery {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+
+    
+}
+
+.gallery img{
+    
+    border: 10px solid #50C7C7; 
+    margin: 10px;
+    width: 300px;
+    
+}
+
+
+#logo {
+    position: relative;
+    animation: mymove 5s forwards;
+  }
+
+
+@keyframes mymove {
+    from {width: 25px; opacity: 0;}
+    to {width: 475px; opacity: 1;}
+  }
+
+
+
+/* Edit the css for the header tag (all instances) and the nav_links class to match our example using flex-properties. The logo should be as far to the left as possible and the links as far to the right as possible. Use flex properties, NOT position properties. */
+@media only screen and (min-width: 900px) {
+
+
+header {
+    flex-direction: row;
+    justify-content: space-between;   
+    
+}
+
+.nav_links {
+    flex-direction: row;
+    width: 275px;
+}
+
+.pricing {
+    width: auto;
+    
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card {
+    width: 275px;
+}
+  
+}
+
+@media (prefers-reduced-motion) {
+    /* styles to apply if a user's device settings are set to reduced motion */
+    @keyframes mymove {
+        from {width: 475px; opacity: 1;}
+        to {width: 475px; opacity: 1;}
+      }
+}
+
+@media print {
+/* @media only screen and (min-width: 1000px) { */
+    body {
+        font-family: "Arial", "Helvetica";
+        background-image: none;
+    }
+
+    body > header {
+        flex-direction: column;
+        
+    }
+
+    .nav_links {
+        width: 100%;
+    }
+
+    #gallery, .gallery {
+        display: none; 
+        visibility:hidden;
+    }
+
+
+
+    /* .card>header {
+        background-color: #288088;
+        border: solid 2px #45ADAD;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 50px 50px 0px 0px;
+        
+        } */
+
+    .card {
+        border: solid 2px #45ADDD;
+    }
+}
